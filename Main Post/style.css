@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700&display=swap');
+
+/*  Variables   */
+
+:root {
+    --background-light-blue: #0d335f;
+    --background-dark-blue: #0e284c;
+    --light-color-blue: #5581ae;
+    --white: #ffffff;
+    --light-black: #17202A;
+    --highlighted-color: #f9fafc;
+}
+
+
+html {
+    font-size: 62.5%; /*10px*/
+    font-family: 'Inter', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*  Header  */
+
+.header {
+    text-align: center;
+    padding: 1rem 0;
+    background: var(--background-light-blue);
+    border-bottom: 5px solid var(--light-color-blue);
+}
+
+@media (min-width: 1024px){
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.logo{
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+
+@media (min-width: 1024px) {
+    .logo {
+        padding-left: 3rem;
+    }
+
+}
+
+.navbar{
+    display: none;
+}
+
+@media (min-width: 1024px){
+    .navbar{
+        display: block;
+    }
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-item a {
+    text-decoration: none;
+    margin: 0 3rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--white);
+    transition: 0.3s ease-in;
+}
+
+.navbar-item a:hover {
+    color: var(--light-color-blue);
+    transition: 0.3s ease-out;
+}
+
+/*  Main Post   */
+
+.main {
+    margin: 3rem 0;
+    padding: 0 5rem;
+}
+
+@media (min-width: 1024px){
+    .main-post{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 3rem;
+    }
+}
+
+.post-img {
+    width: 100%;
+    height: 18rem;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 0.8rem var(--light-black);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('../Images/water-salute2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.post-title {
+    font-size: 2rem;
+    color: var(--white);
+    text-align: center;
+    padding: 4rem;
+    text-shadow: 2px 2px 0.5rem var(--light-black);
+}
+
+@media (min-width: 1024px) {
+    .post-img {
+        height: 25rem;
+    }
+
+    .post-title {
+        font-size: 3rem;
+        padding: 6rem;
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.social-item {
+    list-style: none;
+    display: inline-block;
+    font-size: 2.4rem;
+    margin: 1rem;
+}
+
+.social-item i {
+    color: var(--background-light-blue);
+    transition: 0.3s ease-in;
+}
+
+.social-item i:hover {
+    color: var(--light-color-blue);
+    transition: 0.3s ease-out;
+}
+
+.post-article {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+.post-article h5{
+    margin-bottom: 1rem;
+}
+
+.other-posts-btn {
+    display: inline-block;
+    width: 100%;
+    padding-top: 1rem;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.other-posts-btn a {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--background-light-blue);
+}
+
+.other-posts-btn a:hover {
+    color: var(--light-color-blue);
+}
+
+@media (min-width: 1024px) {
+    .other-posts-btn {
+        display: none;
+    }
+}
+
+/*  Related Posts   */
+
+.related-posts {
+    display: none;
+}
+
+@media (min-width: 1024px){
+    .related-posts{
+        display: block;
+    }
+}
+
+.related-posts__title {
+    font-size: 2.2rem;
+    color: var(--background-light-blue);
+    border-bottom: 2px solid var(--background-light-blue);
+    margin-bottom: 2rem;
+}
+
+.related-post {
+    width: 100%;
+    max-width: 30rem;
+    height: 12rem;
+    background: var(--highlighted-color);
+    border-radius: 1rem;
+    padding: 3rem;
+    margin: 1rem 0;
+}
+
+.related-post:active {
+    transform: translateY(0.5rem);
+    box-shadow: 1px 1px 0.5rem var(--light-black);
+}
+
+.related-post a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--background-light-blue);
+    font-weight: 500;
+    transition: 0.3s ease-in;
+}
+
+.related-post a:hover {
+    font-size: 2.2rem;
+    color: var(--light-color-blue);
+    transition: 0.3s ease-out;
+}
+
+.related-post p {
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-top: 0.5rem;
+}
+
+/*  Footer  */
+
+.footer {
+    padding: 2.2rem 0;
+    background: var(--background-dark-blue);
+    border-top: 0.5rem solid var(--background-light-blue);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 1.4rem;
+}
