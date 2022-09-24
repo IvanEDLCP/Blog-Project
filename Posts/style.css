@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700&display=swap');
+
+/*  Variables   */
+
+:root {
+    --background-light-blue: #0d335f;
+    --background-dark-blue: #0e284c;
+    --light-color-blue: #5581ae;
+    --white: #ffffff;
+    --light-black: #17202A;
+    --highlighted-color: #f9fafc;
+}
+
+
+html {
+    font-size: 62.5%; /*10px*/
+    font-family: 'Inter', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*  Header  */
+
+.header {
+    text-align: center;
+    padding: 1rem 0;
+    background: var(--background-light-blue);
+    border-bottom: 5px solid var(--light-color-blue);
+}
+
+@media (min-width: 1024px){
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.logo{
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+
+@media (min-width: 1024px) {
+    .logo {
+        padding-left: 3rem;
+    }
+
+}
+
+.navbar{
+    display: none;
+}
+
+@media (min-width: 1024px){
+    .navbar{
+        display: block;
+    }
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-item a {
+    text-decoration: none;
+    margin: 0 3rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--white);
+    transition: 0.3s ease-in;
+}
+
+.navbar-item a:hover {
+    color: var(--light-color-blue);
+    transition: 0.3s ease-out;
+}
+
+/*  Main    */
+
+.main {
+    min-height: 100vh;
+}
+
+.page-title {
+    width: 100%;
+    height: 6rem;
+    border-bottom: 5px solid var(--background-light-blue);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('../Images/runway.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    font-size: 1.2rem;
+    color: var(--white);
+    text-align: center;
+    text-shadow: 2px 2px 0.5rem var(--light-black);    
+}
+
+@media (min-width: 1024px) {
+    .page-title {
+        height: 12rem;
+        font-size: 2rem;
+    }
+}
+
+.posts {
+    display: grid;
+    padding: 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .posts {
+        grid-template-columns: repeat(auto-fill, 24rem);
+    }
+}
+
+.post {
+    width: 100%;
+    min-height: 20rem;
+    border-radius: 1rem;
+    background: var(--highlighted-color);
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.post:hover {
+    box-shadow: 2px 2px 0.5rem var(--light-black);
+}
+
+.post-img {
+    width: 95%;
+    height: 10rem;
+    border-radius: 1.5rem;
+
+    background-image: url("../Images/water-salute2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    margin: 0.5rem;
+}
+
+.description {
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.post-title {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--background-dark-blue);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+.post-title:hover {
+    font-size: 1.6rem;
+    color: var(--light-color-blue);
+}
+
+@media (min-width: 1024px) {
+    .post-title {
+        font-size: 1.6rem;
+    }
+
+    .post-title:hover {
+        font-size: 1.7rem;
+    }
+}
+
+/*  Footer  */
+
+.footer {
+    padding: 2.2rem 0;
+    background: var(--background-dark-blue);
+    border-top: 0.5rem solid var(--background-light-blue);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 1.4rem;
+}

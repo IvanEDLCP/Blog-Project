@@ -88,7 +88,10 @@ html {
 .main {
     display: flex;
     justify-content: center;
-    padding: 2rem;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    height: calc(100vh - 127px);
 }
 
 .main-video {
@@ -101,16 +104,17 @@ html {
     object-fit: cover;
 }
 
-.main-description {
-    text-align: center;
-    transform: translateY(18rem);
-}
-
 .main-description p {
     font-size: 2.8rem;
     color: var(--white);
     text-shadow: 2px 2px 0.5rem var(--light-black);
     margin: 1rem 0;
+}
+
+@media (min-width: 1024px) {
+    .main-description p{
+        font-size: 3.5rem;    
+    }
 }
 
 .primary-btn {
@@ -140,20 +144,7 @@ html {
     box-shadow: 2px 2px 1rem var(--light-black);
 }
 
-@media (min-width: 1024px) {
-    .main {
-        padding: 4rem;
-    }
 
-    .main-description {
-        transform: translateY(14rem);
-    }
-
-    .main-description p{
-        font-size: 3.5rem;    
-    }
-    
-}
 
 /*  Footer  */
 
