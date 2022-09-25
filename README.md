@@ -7,7 +7,7 @@ Septiembre 2022
 Este sitio web de tipo estatico, consta de 5 paginas como:
 
 =Pagina=   | =Carpeta=
--Homepage  | Homepage
+-Home      | ./
 -Nosotros  | About Us
 -Posts     | Posts
 --Post I   | Main Post
